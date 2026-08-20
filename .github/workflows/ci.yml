@@ -27,3 +27,11 @@ jobs:
         run: make xcode-test
       - name: Package app
         run: make app
+      - name: Validate Homebrew Cask
+        run: |
+          ruby -c Casks/mouseportal.rb
+          ruby -c scripts/update-cask.rb
+          cp Casks/mouseportal.rb "${RUNNER_TEMP}/mouseportal.rb"
+          ruby scripts/update-cask.rb 9.8.7 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa "${RUNNER_TEMP}/mouseportal.rb"
+          grep -F 'version "9.8.7"' "${RUNNER_TEMP}/mouseportal.rb"
+          grep -F 'sha256 "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"' "${RUNNER_TEMP}/mouseportal.rb"

@@ -49,9 +49,33 @@ jobs:
         run: make archive
 
       - name: Create checksum
-        run: shasum -a 256 ".build/app/MousePortal-${VERSION}-macOS.zip" > ".build/app/MousePortal-${VERSION}-macOS.zip.sha256"
+        id: checksum
+        run: |
+          archive=".build/app/MousePortal-${VERSION}-macOS.zip"
+          sha256="$(shasum -a 256 "$archive" | awk '{print $1}')"
+          echo "${sha256}  $(basename "$archive")" > "${archive}.sha256"
+          echo "sha256=${sha256}" >> "$GITHUB_OUTPUT"
 
       - name: Attach artifacts to GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload "${{ needs.release-please.outputs.tag_name }}" ".build/app/MousePortal-${VERSION}-macOS.zip" ".build/app/MousePortal-${VERSION}-macOS.zip.sha256" --clobber
+
+      - name: Update Homebrew Cask
+        env:
+          CASK_SHA256: ${{ steps.checksum.outputs.sha256 }}
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+          ruby scripts/update-cask.rb "$VERSION" "$CASK_SHA256"
+
+          if git diff --quiet -- Casks/mouseportal.rb; then
+            echo "Homebrew Cask is already current."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- Casks/mouseportal.rb
+          git commit -m "chore: update Homebrew cask for ${VERSION}"
+          git push origin main
