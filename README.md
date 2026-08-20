@@ -35,6 +35,24 @@ This repository contains an early, functional prototype. It is intentionally loc
 
 An Apple Developer Program membership is **not** required to build or use the app locally. It is only needed later for a trusted Developer ID signature and notarization.
 
+## Install with Homebrew
+
+MousePortal can be installed from this repository as a Homebrew Cask:
+
+```sh
+brew tap paolo-05/mouse-portal-macos https://github.com/paolo-05/mouse-portal-macos.git && \
+  brew install --cask paolo-05/mouse-portal-macos/mouseportal
+```
+
+Homebrew installs `MousePortal.app` in `/Applications`. To upgrade or remove it later:
+
+```sh
+brew upgrade --cask paolo-05/mouse-portal-macos/mouseportal
+brew uninstall --cask mouseportal
+```
+
+Because current releases use an ad-hoc signature rather than Apple notarization, macOS may require explicit approval on first launch. Accessibility permission may also need to be enabled again after an upgrade.
+
 ## Build locally
 
 ```sh
@@ -95,6 +113,8 @@ The included workflows build and test every change. Releases use Conventional Co
 - `feat!:` or a `BREAKING CHANGE:` footer selects the next major version.
 
 Pushes to `main` create or update a Release PR. Merging that PR creates the `vX.Y.Z` tag and GitHub Release, then attaches the zipped app and its SHA-256 checksum. See [CONTRIBUTING.md](CONTRIBUTING.md) for the commit convention.
+
+After publishing the archive, the release workflow updates `Casks/mouseportal.rb` with the released version and checksum.
 
 These early archives are ad-hoc signed and not notarized. macOS Gatekeeper will not treat them like a Developer ID release. Signing and notarization can be added later without changing the app architecture.
 
