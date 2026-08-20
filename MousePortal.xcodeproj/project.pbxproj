@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000000000000000000600 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000100 /* Models.swift */; };
+		A00000000000000000000601 /* PortalGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000101 /* PortalGeometry.swift */; };
+		A00000000000000000000610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000200 /* AppDelegate.swift */; };
+		A00000000000000000000611 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000201 /* AppState.swift */; };
+		A00000000000000000000612 /* ArrivalIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000202 /* ArrivalIndicatorController.swift */; };
+		A00000000000000000000613 /* ConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000203 /* ConfigurationStore.swift */; };
+		A00000000000000000000614 /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000204 /* DiagnosticsView.swift */; };
+		A00000000000000000000615 /* DisplayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000205 /* DisplayService.swift */; };
+		A00000000000000000000616 /* EditorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000206 /* EditorWindowController.swift */; };
+		A00000000000000000000617 /* GlobalShortcutMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000207 /* GlobalShortcutMonitor.swift */; };
+		A00000000000000000000618 /* MousePortalApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000208 /* MousePortalApplication.swift */; };
+		A00000000000000000000619 /* PortalCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000209 /* PortalCanvasView.swift */; };
+		A0000000000000000000061A /* PortalColor+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000020A /* PortalColor+SwiftUI.swift */; };
+		A0000000000000000000061B /* PortalEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000020B /* PortalEditorView.swift */; };
+		A0000000000000000000061C /* PortalEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000020C /* PortalEngine.swift */; };
+		A0000000000000000000061D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000020D /* SettingsView.swift */; };
+		A0000000000000000000061E /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000020E /* StatusMenuController.swift */; };
+		A00000000000000000000630 /* MousePortal.icns in Resources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000402 /* MousePortal.icns */; };
+		A00000000000000000000640 /* libMousePortalCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A000000000000000000000501 /* libMousePortalCore.a */; };
+		A00000000000000000000650 /* PortalGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000000000000000000300 /* PortalGeometryTests.swift */; };
+		A00000000000000000000651 /* libMousePortalCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A000000000000000000000501 /* libMousePortalCore.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A00000000000000000000A01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A000000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A000000000000000000000800;
+			remoteInfo = MousePortalCore;
+		};
+		A00000000000000000000A03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A000000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A000000000000000000000800;
+			remoteInfo = MousePortalCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A000000000000000000000100 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A000000000000000000000101 /* PortalGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalGeometry.swift; sourceTree = "<group>"; };
+		A000000000000000000000200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A000000000000000000000201 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A000000000000000000000202 /* ArrivalIndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalIndicatorController.swift; sourceTree = "<group>"; };
+		A000000000000000000000203 /* ConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStore.swift; sourceTree = "<group>"; };
+		A000000000000000000000204 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		A000000000000000000000205 /* DisplayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayService.swift; sourceTree = "<group>"; };
+		A000000000000000000000206 /* EditorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorWindowController.swift; sourceTree = "<group>"; };
+		A000000000000000000000207 /* GlobalShortcutMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalShortcutMonitor.swift; sourceTree = "<group>"; };
+		A000000000000000000000208 /* MousePortalApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MousePortalApplication.swift; sourceTree = "<group>"; };
+		A000000000000000000000209 /* PortalCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalCanvasView.swift; sourceTree = "<group>"; };
+		A00000000000000000000020A /* PortalColor+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PortalColor+SwiftUI.swift"; sourceTree = "<group>"; };
+		A00000000000000000000020B /* PortalEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalEditorView.swift; sourceTree = "<group>"; };
+		A00000000000000000000020C /* PortalEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalEngine.swift; sourceTree = "<group>"; };
+		A00000000000000000000020D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A00000000000000000000020E /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		A000000000000000000000300 /* PortalGeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalGeometryTests.swift; sourceTree = "<group>"; };
+		A000000000000000000000400 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		A000000000000000000000401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A000000000000000000000402 /* MousePortal.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MousePortal.icns; sourceTree = "<group>"; };
+		A000000000000000000000500 /* MousePortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MousePortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A000000000000000000000501 /* libMousePortalCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMousePortalCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A000000000000000000000502 /* MousePortalCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MousePortalCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A000000000000000000000701 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		A000000000000000000000712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (A00000000000000000000640 /* libMousePortalCore.a in Frameworks */,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A000000000000000000000722 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (A00000000000000000000651 /* libMousePortalCore.a in Frameworks */,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A000000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000000004 /* Sources */,
+				A000000000000000000000005 /* Tests */,
+				A000000000000000000000013 /* Resources */,
+				A000000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A000000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000000500 /* MousePortal.app */,
+				A000000000000000000000501 /* libMousePortalCore.a */,
+				A000000000000000000000502 /* MousePortalCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A000000000000000000000004 /* Sources */ = {
+			isa = PBXGroup;
+			children = (A000000000000000000000010 /* MousePortalCore */, A000000000000000000000011 /* MousePortal */,);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A000000000000000000000005 /* Tests */ = {
+			isa = PBXGroup;
+			children = (A000000000000000000000012 /* MousePortalCoreTests */,);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A000000000000000000000010 /* MousePortalCore */ = {
+			isa = PBXGroup;
+			children = (A000000000000000000000100 /* Models.swift */, A000000000000000000000101 /* PortalGeometry.swift */,);
+			path = MousePortalCore;
+			sourceTree = "<group>";
+		};
+		A000000000000000000000011 /* MousePortal */ = {
+			isa = PBXGroup;
+			children = (
+				A000000000000000000000200 /* AppDelegate.swift */,
+				A000000000000000000000201 /* AppState.swift */,
+				A000000000000000000000202 /* ArrivalIndicatorController.swift */,
+				A000000000000000000000203 /* ConfigurationStore.swift */,
+				A000000000000000000000204 /* DiagnosticsView.swift */,
+				A000000000000000000000205 /* DisplayService.swift */,
+				A000000000000000000000206 /* EditorWindowController.swift */,
+				A000000000000000000000207 /* GlobalShortcutMonitor.swift */,
+				A000000000000000000000208 /* MousePortalApplication.swift */,
+				A000000000000000000000209 /* PortalCanvasView.swift */,
+				A00000000000000000000020A /* PortalColor+SwiftUI.swift */,
+				A00000000000000000000020B /* PortalEditorView.swift */,
+				A00000000000000000000020C /* PortalEngine.swift */,
+				A00000000000000000000020D /* SettingsView.swift */,
+				A00000000000000000000020E /* StatusMenuController.swift */,
+			);
+			path = MousePortal;
+			sourceTree = "<group>";
+		};
+		A000000000000000000000012 /* MousePortalCoreTests */ = {
+			isa = PBXGroup;
+			children = (A000000000000000000000300 /* PortalGeometryTests.swift */,);
+			path = MousePortalCoreTests;
+			sourceTree = "<group>";
+		};
+		A000000000000000000000013 /* Resources */ = {
+			isa = PBXGroup;
+			children = (A000000000000000000000400 /* AppIcon.png */, A000000000000000000000401 /* Info.plist */, A000000000000000000000402 /* MousePortal.icns */,);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A000000000000000000000800 /* MousePortalCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A000000000000000000000912 /* Build configuration list for PBXNativeTarget "MousePortalCore" */;
+			buildPhases = (A000000000000000000000700 /* Sources */, A000000000000000000000701 /* Frameworks */,);
+			buildRules = ();
+			dependencies = ();
+			name = MousePortalCore;
+			productName = MousePortalCore;
+			productReference = A000000000000000000000501 /* libMousePortalCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A000000000000000000000801 /* MousePortal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A000000000000000000000922 /* Build configuration list for PBXNativeTarget "MousePortal" */;
+			buildPhases = (A000000000000000000000710 /* Sources */, A000000000000000000000712 /* Frameworks */, A000000000000000000000711 /* Resources */,);
+			buildRules = ();
+			dependencies = (A00000000000000000000A02 /* PBXTargetDependency */,);
+			name = MousePortal;
+			productName = MousePortal;
+			productReference = A000000000000000000000500 /* MousePortal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A000000000000000000000802 /* MousePortalCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A000000000000000000000932 /* Build configuration list for PBXNativeTarget "MousePortalCoreTests" */;
+			buildPhases = (A000000000000000000000720 /* Sources */, A000000000000000000000722 /* Frameworks */,);
+			buildRules = ();
+			dependencies = (A00000000000000000000A04 /* PBXTargetDependency */,);
+			name = MousePortalCoreTests;
+			productName = MousePortalCoreTests;
+			productReference = A000000000000000000000502 /* MousePortalCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					A000000000000000000000800 = {CreatedOnToolsVersion = 26.6;};
+					A000000000000000000000801 = {CreatedOnToolsVersion = 26.6;};
+					A000000000000000000000802 = {CreatedOnToolsVersion = 26.6;};
+				};
+			};
+			buildConfigurationList = A000000000000000000000902 /* Build configuration list for PBXProject "MousePortal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base,);
+			mainGroup = A000000000000000000000002;
+			productRefGroup = A000000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A000000000000000000000801 /* MousePortal */, A000000000000000000000800 /* MousePortalCore */, A000000000000000000000802 /* MousePortalCoreTests */,);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A000000000000000000000711 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000630 /* MousePortal.icns in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A000000000000000000000700 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000600 /* Models.swift in Sources */, A00000000000000000000601 /* PortalGeometry.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		A000000000000000000000710 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000610 /* AppDelegate.swift in Sources */,
+				A00000000000000000000611 /* AppState.swift in Sources */,
+				A00000000000000000000612 /* ArrivalIndicatorController.swift in Sources */,
+				A00000000000000000000613 /* ConfigurationStore.swift in Sources */,
+				A00000000000000000000614 /* DiagnosticsView.swift in Sources */,
+				A00000000000000000000615 /* DisplayService.swift in Sources */,
+				A00000000000000000000616 /* EditorWindowController.swift in Sources */,
+				A00000000000000000000617 /* GlobalShortcutMonitor.swift in Sources */,
+				A00000000000000000000618 /* MousePortalApplication.swift in Sources */,
+				A00000000000000000000619 /* PortalCanvasView.swift in Sources */,
+				A0000000000000000000061A /* PortalColor+SwiftUI.swift in Sources */,
+				A0000000000000000000061B /* PortalEditorView.swift in Sources */,
+				A0000000000000000000061C /* PortalEngine.swift in Sources */,
+				A0000000000000000000061D /* SettingsView.swift in Sources */,
+				A0000000000000000000061E /* StatusMenuController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A000000000000000000000720 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000650 /* PortalGeometryTests.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A00000000000000000000A02 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A000000000000000000000800 /* MousePortalCore */; targetProxy = A00000000000000000000A01 /* PBXContainerItemProxy */; };
+		A00000000000000000000A04 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = A000000000000000000000800 /* MousePortalCore */; targetProxy = A00000000000000000000A03 /* PBXContainerItemProxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A000000000000000000000900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A000000000000000000000901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A000000000000000000000910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mouseportal.MousePortalCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A000000000000000000000911 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mouseportal.MousePortalCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A000000000000000000000920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mouseportal.MousePortal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A000000000000000000000921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mouseportal.MousePortal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A000000000000000000000930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mouseportal.MousePortalCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		A000000000000000000000931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mouseportal.MousePortalCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A000000000000000000000902 /* Build configuration list for PBXProject "MousePortal" */ = {isa = XCConfigurationList; buildConfigurations = (A000000000000000000000900 /* Debug */, A000000000000000000000901 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A000000000000000000000912 /* Build configuration list for PBXNativeTarget "MousePortalCore" */ = {isa = XCConfigurationList; buildConfigurations = (A000000000000000000000910 /* Debug */, A000000000000000000000911 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A000000000000000000000922 /* Build configuration list for PBXNativeTarget "MousePortal" */ = {isa = XCConfigurationList; buildConfigurations = (A000000000000000000000920 /* Debug */, A000000000000000000000921 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A000000000000000000000932 /* Build configuration list for PBXNativeTarget "MousePortalCoreTests" */ = {isa = XCConfigurationList; buildConfigurations = (A000000000000000000000930 /* Debug */, A000000000000000000000931 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A000000000000000000000001 /* Project object */;
+}

@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:mouse-portal-macos}",
+            "name": "Debug MousePortal",
+            "target": "MousePortal",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug MousePortal"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:mouse-portal-macos}",
+            "name": "Release MousePortal",
+            "target": "MousePortal",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release MousePortal"
+        }
+    ]
+}

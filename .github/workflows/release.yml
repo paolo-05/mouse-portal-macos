@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      version: ${{ steps.release.outputs.version }}
+      sha: ${{ steps.release.outputs.sha }}
+    steps:
+      - name: Prepare release
+        id: release
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  build-release:
+    needs: release-please
+    if: needs.release-please.outputs.release_created == 'true'
+    runs-on: macos-15
+    env:
+      VERSION: ${{ needs.release-please.outputs.version }}
+    steps:
+      - name: Check out released revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release-please.outputs.sha }}
+
+      - name: Toolchain
+        run: xcodebuild -version && swift --version
+
+      - name: Test
+        run: make test
+
+      - name: Build release archive
+        run: make archive
+
+      - name: Create checksum
+        run: shasum -a 256 ".build/app/MousePortal-${VERSION}-macOS.zip" > ".build/app/MousePortal-${VERSION}-macOS.zip.sha256"
+
+      - name: Attach artifacts to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "${{ needs.release-please.outputs.tag_name }}" ".build/app/MousePortal-${VERSION}-macOS.zip" ".build/app/MousePortal-${VERSION}-macOS.zip.sha256" --clobber
