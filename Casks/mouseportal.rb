@@ -1,6 +1,6 @@
 cask "mouseportal" do
-  version "0.1.0"
-  sha256 "9eb4c7261d81813e126c3c2db8fe716a2f511a57c52db044b400a9c920feec1e"
+  version "0.2.0"
+  sha256 "149a534ef7177cf375ab79c871b93a8d47234bf04c5e60f32db2987c24098f83"
 
   url "https://github.com/paolo-05/mouse-portal-macos/releases/download/v#{version}/MousePortal-#{version}-macOS.zip"
   name "MousePortal"
