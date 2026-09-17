@@ -126,54 +126,67 @@ struct PortalCanvasView: View {
     @State private var dragPoint: CGPoint?
 
     var body: some View {
-        GeometryReader { proxy in
-            let transform = CanvasTransform(displays: displays, size: proxy.size)
-            TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion || portals.isEmpty)) { timeline in
-                Canvas { context, _ in
-                    drawDisplays(context: &context, transform: transform)
-                    drawPortals(
-                        context: &context,
-                        transform: transform,
-                        timeline: timeline.date.timeIntervalSinceReferenceDate
-                    )
-                    drawDragPreview(context: &context, transform: transform)
+        VStack(spacing: 0) {
+            GeometryReader { proxy in
+                let transform = CanvasTransform(displays: displays, size: proxy.size)
+                TimelineView(.animation(minimumInterval: 1 / 30, paused: reduceMotion || portals.isEmpty)) { timeline in
+                    Canvas { context, _ in
+                        drawDisplays(context: &context, transform: transform)
+                        drawPortals(
+                            context: &context,
+                            transform: transform,
+                            timeline: timeline.date.timeIntervalSinceReferenceDate
+                        )
+                        drawDragPreview(context: &context, transform: transform)
+                    }
                 }
+                .contentShape(Rectangle())
+                .gesture(dragGesture(transform: transform))
+                .accessibilityLabel("Display portal editor")
+                .accessibilityHint("Drag from one display edge to another to create a portal")
             }
-            .contentShape(Rectangle())
-            .gesture(dragGesture(transform: transform))
-            .accessibilityLabel("Display portal editor")
-            .accessibilityHint("Drag from one display edge to another to create a portal")
+
+            if displays.count < 2 {
+                guidanceBar(
+                    icon: "display.2",
+                    title: "Connect another display",
+                    message: "MousePortal needs at least two active displays to create a portal."
+                )
+            } else if portals.isEmpty {
+                guidanceBar(
+                    icon: "cursorarrow.motionlines",
+                    title: "Drag between display edges",
+                    message: "Start on one display edge, then release on another display."
+                )
+            }
         }
         .background(Color(nsColor: .controlBackgroundColor))
-        .overlay {
-            if displays.count < 2 {
-                VStack(spacing: 9) {
-                    Image(systemName: "display.2")
-                        .font(.system(size: 24, weight: .medium))
-                        .foregroundStyle(.secondary)
-                    Text("Connect another display")
-                        .font(.headline)
-                    Text("MousePortal needs at least two active displays to create a portal.")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-                .padding(20)
-            } else if portals.isEmpty && dragMode == nil {
-                VStack(spacing: 7) {
-                    Image(systemName: "cursorarrow.motionlines")
-                        .font(.system(size: 22, weight: .medium))
-                        .foregroundStyle(.secondary)
-                    Text("Drag between display edges")
-                        .font(.headline)
-                    Text("Start anywhere on one edge and release on another display.")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-                .padding(18)
-                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12))
-                .allowsHitTesting(false)
+    }
+
+    private func guidanceBar(icon: String, title: String, message: String) -> some View {
+        HStack(spacing: 11) {
+            Image(systemName: icon)
+                .font(.system(size: 17, weight: .medium))
+                .foregroundStyle(.secondary)
+                .frame(width: 22)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.system(size: 13, weight: .semibold))
+                Text(message)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
+
+            Spacer(minLength: 0)
         }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 11)
+        .background(Color(nsColor: .windowBackgroundColor))
+        .overlay(alignment: .top) {
+            Divider()
+        }
+        .accessibilityElement(children: .combine)
     }
 
     private func drawDisplays(context: inout GraphicsContext, transform: CanvasTransform) {
